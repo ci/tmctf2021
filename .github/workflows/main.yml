@@ -14,3 +14,5 @@ jobs:
           echo "And remember, encoding is always the answer."
       - name: SSH connection to Actions 1
         uses: csexton/debugger-action@master
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
